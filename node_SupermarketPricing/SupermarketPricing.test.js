@@ -4,5 +4,6 @@ test('buy one can of beans', () => {
 });
 
 function calculator(articles) {
-    return articles;
+    var price = 0.65;
+    return articles * price;
 }
