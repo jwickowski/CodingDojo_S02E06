@@ -1,21 +1,15 @@
-test('buy one can of beans', () => {
-    var result = calculator(1)
-    expect(result).toBe(0.65)
-});
+const add = (a, b) => a + b;
 
-test('buy two cans of beans', () => {
-    var result = calculator(2)
-    expect(result).toBe(1.3)
-});
+const cases = [[1,0.65], [2, 1.3], [3, 1], [4,1.65]];
 
-test('buy three cans of beans', () => {
-    var result = calculator(3)
-    expect(result).toBe(1)
-});
-
-test('buy four cans of beans', () => {
-    var result = calculator(4)
-    expect(result).toBe(1.65)
+describe("calculate price of beans cans", () => {
+  test.each(cases)(
+    "given %p cans, price should be %p",
+    (numberOfCans, expectedPrice) => {
+        var result = calculator(numberOfCans)
+      expect(result).toEqual(expectedPrice);
+    }
+  );
 });
 
 function calculator(articles) {
