@@ -1,14 +1,14 @@
-xtest('buy one can of beans', () => {
+test('buy one can of beans', () => {
     var result = calculator(1)
     expect(result).toBe(0.65)
 });
 
-xtest('buy two cans of beans', () => {
+test('buy two cans of beans', () => {
     var result = calculator(2)
     expect(result).toBe(1.3)
 });
 
-xtest('buy three cans of beans', () => {
+test('buy three cans of beans', () => {
     var result = calculator(3)
     expect(result).toBe(1)
 });
@@ -22,7 +22,7 @@ function calculator(articles) {
     var articlesToCalculateCount = articles
     var bensPrice = 0.65;
     var result = 0;
-    if (articles > 3)
+    if (articles >= 3)
     {
         articlesToCalculateCount=articlesToCalculateCount- 3;
         result = 1;
