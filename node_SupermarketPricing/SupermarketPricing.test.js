@@ -3,6 +3,16 @@ test('buy one can of beans', () => {
     expect(result).toBe(0.65)
 });
 
+test('buy two cans of beans', () => {
+    var result = calculator(2)
+    expect(result).toBe(1.3)
+});
+
+test('buy three cans of beans', () => {
+    var result = calculator(3)
+    expect(result).toBe(1)
+});
+
 function calculator(articles) {
     var price = 0.65;
     return articles * price;
