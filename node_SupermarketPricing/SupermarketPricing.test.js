@@ -1,6 +1,13 @@
 const add = (a, b) => a + b;
 
-const cases = [[1,0.65], [2, 1.3], [3, 1], [4,1.65]];
+const cases = [
+    [1,0.65], 
+    [2, 1.3], 
+    [3, 1], 
+    [4,1.65],
+    [5,2.3],
+    [6,2],
+    [7,2.65]];
 
 describe("calculate price of beans cans", () => {
   test.each(cases)(
